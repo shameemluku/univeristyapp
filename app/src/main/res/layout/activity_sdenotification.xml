@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".sdenotificationActivity"
+    android:id="@+id/activity_sdenotification">
+
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:elevation="0dp"
+        android:gravity="center"
+        android:background="@color/colorPrimary">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+            <RelativeLayout
+                android:orientation="horizontal"
+                android:layout_gravity="start"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <ImageButton
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:background="@color/colorPrimary"
+                    android:src="@drawable/backarrow"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginBottom="2dp"
+                    android:onClick="closeSDE"/>
+                <TextView
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="SDE Notifications"
+                    android:textSize="20dp"
+                    android:layout_marginLeft="50dp"
+                    android:textColor="#ffffff"
+                    android:gravity="center_vertical"/>
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_gravity="end"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="16dp"
+                    android:background="@drawable/websitelogo"
+                    android:layout_marginRight="15dp"
+                    android:onClick="sdeWeb"
+                    android:clickable="true"/>
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/swipenotif"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="?attr/actionBarSize">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        </android.support.v7.widget.RecyclerView>
+
+
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+    <com.google.android.gms.ads.AdView
+        xmlns:ads="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/adViewSDE"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        ads:adSize="SMART_BANNER"
+        ads:adUnitId="ca-app-pub-1077388695437306/6277350813">
+    </com.google.android.gms.ads.AdView>
+
+</RelativeLayout>
+

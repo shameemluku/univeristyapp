@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".timetableActivity"
+    android:id="@+id/activity_timetable">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:elevation="0dp"
+        android:gravity="center"
+        android:background="@color/colorPrimary">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+            <RelativeLayout
+                android:orientation="horizontal"
+                android:layout_gravity="start"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <ImageButton
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:background="@color/colorPrimary"
+                    android:src="@drawable/backarrow"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginBottom="2dp"
+                    android:onClick="closeTime"/>
+                <TextView
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="Time Table"
+                    android:textSize="20dp"
+                    android:layout_marginLeft="50dp"
+                    android:textColor="#ffffff"
+                    android:gravity="center_vertical"/>
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_gravity="end"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="16dp"
+                    android:background="@drawable/websitelogo"
+                    android:layout_marginRight="15dp"
+                    android:onClick="timeWeb"
+                    android:clickable="true"/>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.v7.widget.CardView
+        android:foreground="?android:attr/selectableItemBackground"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_marginTop="?attr/actionBarSize">
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:paddingLeft="5dp">
+
+                <LinearLayout
+                    android:id="@+id/timealltab"
+                    android:layout_width="120dp"
+                    android:layout_height="45dp"
+                    android:background="@drawable/filterbutton"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:clickable="true"
+                    android:onClick="tAllClicked">
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_gravity="center">
+
+                        <ImageView
+                            android:id="@+id/tALLFilterIcon"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_gravity="center"
+                            android:background="@drawable/filtericonselect"/>
+
+                        <TextView
+                            android:id="@+id/tAllTextview"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="ALL"
+                            android:layout_gravity="center"
+                            android:textColor="#ffffff"
+                            android:layout_marginLeft="3dp"/>
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/timeugtab"
+                    android:layout_width="150dp"
+                    android:layout_height="45dp"
+                    android:background="@drawable/filterbuttonunsel"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:layout_marginLeft="5dp"
+                    android:clickable="true"
+                    android:onClick="tUGClicked">
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_gravity="center">
+
+                        <ImageView
+                            android:id="@+id/tUGFilterIcon"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_gravity="center"
+                            android:background="@drawable/filtericonunselect"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Undergraduate"
+                            android:id="@+id/tUGTextview"
+                            android:layout_gravity="center"
+                            android:textColor="@color/darkGray"
+                            android:layout_marginLeft="3dp"/>
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/timepgtab"
+                    android:layout_width="150dp"
+                    android:layout_height="45dp"
+                    android:background="@drawable/filterbuttonunsel"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:layout_marginLeft="5dp"
+                    android:clickable="true"
+                    android:onClick="tPGClicked">
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_gravity="center">
+
+                        <ImageView
+                            android:id="@+id/tPGFilterIcon"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_gravity="center"
+                            android:background="@drawable/filtericonunselect"/>
+
+                        <TextView
+                            android:id="@+id/tPGTextview"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Postgraduate"
+                            android:layout_gravity="center"
+                            android:textColor="@color/darkGray"
+                            android:layout_marginLeft="3dp"/>
+
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/timeothertab"
+                    android:layout_width="130dp"
+                    android:layout_height="45dp"
+                    android:background="@drawable/filterbuttonunsel"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:layout_marginLeft="5dp"
+                    android:clickable="true"
+                    android:onClick="tOTHERClicked">
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_gravity="center">
+
+                        <ImageView
+                            android:id="@+id/tOTHRFilterIcon"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_gravity="center"
+                            android:background="@drawable/filtericonunselect"/>
+
+                        <TextView
+                            android:id="@+id/tOTHTextview"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Other"
+                            android:layout_gravity="center"
+                            android:textColor="@color/darkGray"
+                            android:layout_marginLeft="3dp"/>
+
+                    </LinearLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+        </HorizontalScrollView>
+
+    </android.support.v7.widget.CardView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="?attr/actionBarSize">
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/swipetime"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="?attr/actionBarSize">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/trecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        </android.support.v7.widget.RecyclerView>
+
+    </android.support.v4.widget.SwipeRefreshLayout>
+    </LinearLayout>
+
+    <com.google.android.gms.ads.AdView
+        xmlns:ads="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/adViewTT"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        ads:adSize="SMART_BANNER"
+        ads:adUnitId="ca-app-pub-1077388695437306/1578190926">
+    </com.google.android.gms.ads.AdView>
+
+</RelativeLayout>
+

@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".contactActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:elevation="0dp"
+        android:gravity="center"
+        android:background="@color/colorPrimary">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_gravity="start"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <ImageButton
+                    android:layout_marginTop="4dp"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:background="@color/colorPrimary"
+                    android:src="@drawable/backarrow"
+                    android:clickable="true"
+                    android:onClick="closeContact"
+                    android:layout_marginBottom="5dp"/>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+
+                        android:id="@+id/browserHead"
+                        android:layout_gravity="left"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="Contacts"
+                        android:maxLength="27"
+                        android:textSize="18dp"
+                        android:textColor="#ffffff"/>
+
+                    <TextView
+                        android:layout_gravity="left"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="University of Calicut"
+                        android:maxLength="25"
+                        android:textSize="13dp"
+                        android:textColor="@color/browserDesc"/>
+                </LinearLayout>
+
+            </LinearLayout>
+            <LinearLayout
+                android:paddingTop="-10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center">
+
+
+            </LinearLayout>
+        </LinearLayout>
+    </android.support.design.widget.AppBarLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="?attr/actionBarSize"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.CardView
+            android:foreground="?android:attr/selectableItemBackground"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="6dp"
+            android:layout_marginRight="6dp"
+            android:layout_marginTop="3dp"
+            android:layout_marginBottom="3dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/postlogo"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" Postal Address"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="18dp"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/lightGray"
+                    android:layout_margin="10dp"/>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="University Of Calicut,\nMalappuram (District), PIN 673 635\nCalicut University PO, Kerala, India,"
+                    android:textAlignment="center"
+                    android:layout_marginBottom="10dp"
+                    android:textSize="16dp"
+                    android:textColor="#303030"/>
+
+
+                </LinearLayout>
+        </android.support.v7.widget.CardView>
+
+
+
+
+        <android.support.v7.widget.CardView
+            android:foreground="?android:attr/selectableItemBackground"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:layout_marginBottom="3dp">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:background="@drawable/phonelogo"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:text="Telephone Directory"
+                    android:layout_marginLeft="35dp"
+                    android:textColor="@color/colorPrimary"
+                    android:layout_alignParentLeft="true"
+                    android:textSize="18dp"
+                    android:gravity="center_vertical"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="more..."
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="10dp"
+                    android:textSize="17dp"
+                    android:textColor="@color/colorAccent"
+                    android:layout_centerVertical="true"
+                    android:onClick="morecontact"/>
+
+            </RelativeLayout>
+
+        </android.support.v7.widget.CardView>
+
+
+
+
+
+        <android.support.v7.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:id="@+id/contact1recycler"/>
+
+
+
+    </LinearLayout>
+
+</RelativeLayout>

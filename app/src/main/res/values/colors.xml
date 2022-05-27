@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#4a68fa</color>
+    <color name="colorPrimaryDark">#4a68fa</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="lightGray">#d2d2d2</color>
+    <color name="notifHead">#24566d</color>
+    <color name="browserDesc">#93a5fc</color>
+    <color name="darkGray">#4e4e4e</color>
+    <color name="white">#ffffff</color>
+</resources>

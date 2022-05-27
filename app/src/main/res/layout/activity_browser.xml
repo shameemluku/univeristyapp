@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".browserActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:elevation="0dp"
+        android:gravity="center"
+        android:background="@color/colorPrimary">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_gravity="start"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <ImageButton
+                    android:layout_marginTop="4dp"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:background="@color/colorPrimary"
+                    android:src="@drawable/backarrow"
+                    android:layout_marginBottom="5dp"
+                    android:onClick="closeBrowser"/>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+
+                        android:id="@+id/browserHead"
+                        android:layout_gravity="left"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="Browser"
+                        android:maxLength="27"
+                        android:textSize="18dp"
+                        android:textColor="#ffffff"/>
+
+                    <TextView
+                        android:layout_gravity="left"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="University of Calicut"
+                        android:maxLength="25"
+                        android:textSize="13dp"
+                        android:textColor="@color/browserDesc"/>
+                </LinearLayout>
+
+            </LinearLayout>
+            <LinearLayout
+                android:paddingTop="-10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center">
+
+
+            </LinearLayout>
+        </LinearLayout>
+    </android.support.design.widget.AppBarLayout>
+
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/swipeUniv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="?attr/actionBarSize">
+
+        <WebView
+            android:id="@+id/cuweb"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="?attr/actionBarSize">
+
+        </WebView>
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+</RelativeLayout>
